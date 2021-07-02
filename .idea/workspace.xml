@@ -2,15 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="251af84b-11ff-4cfd-9527-77d5adac7d86" name="Default Changelist" comment="test">
-      <change afterPath="$PROJECT_DIR$/src/util/bson/BsonUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/bson/Column.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/bson/DogModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/bson/NotColumn.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/bson/StudentModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/bson/Table.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dawn/test03/Test04.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java-ParseT/study/MongoStudy.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/study/MongoStudy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/study/MongoStudy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java-ParseT/dawn/test03/Model.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java-ParseT/dawn/test03/Model.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java-ParseT/dawn/test03/WordParseHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java-ParseT/dawn/test03/WordParseHelper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dawn/test03/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dawn/test03/Model.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dawn/test03/WordParseHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dawn/test03/WordParseHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/bson/BsonUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/bson/BsonUtil.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,27 +51,14 @@
       <recent name="dawn.test03" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="dawn.test03" />
       <recent name="dawn" />
       <recent name="qibo.wenshu" />
       <recent name="qibo.map" />
       <recent name="qibo" />
-      <recent name="test" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MongoStudy">
-    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="qibo.wenshu.Main" />
-      <module name="Java-ParseT" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="qibo.wenshu.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.Test04">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Java-ParseT" />
@@ -107,6 +92,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Test04" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="dawn.test03.Test04" />
+      <module name="Java-ParseT" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dawn.test03.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="WordParseHelper" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="util.WordParseHelper" />
       <module name="Java-ParseT" />
@@ -121,19 +119,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Main (1)" />
       <item itemvalue="Application.Test03" />
       <item itemvalue="Application.MongoStudy" />
       <item itemvalue="Application.WordParseHelper" />
       <item itemvalue="Application.Main" />
+      <item itemvalue="Application.Test04" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Test04" />
         <item itemvalue="Application.MongoStudy" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Test03" />
         <item itemvalue="Application.WordParseHelper" />
-        <item itemvalue="Application.Main (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -153,7 +151,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624203983595</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="test">
+      <created>1625236735724</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1625236735724</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

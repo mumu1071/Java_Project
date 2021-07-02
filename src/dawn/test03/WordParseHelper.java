@@ -45,6 +45,10 @@ public class WordParseHelper {
 
     private List<String> list_未来预期;
 
+    public WordParseHelper() {
+        initData();
+    }
+
     public static void main(String[] args) {
         WordParseHelper wordParseHelper = new WordParseHelper();
         wordParseHelper.initData();
@@ -118,7 +122,6 @@ public class WordParseHelper {
                 model.未来预期数 += 1;
             }
         }
-        return;
     }
 
     private List<String> getWordList(int sheetIndex, String file_words) {

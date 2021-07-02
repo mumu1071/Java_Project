@@ -48,13 +48,18 @@ public final class BsonUtil {
                 for (int j = 0; j < methods.length; j++) {// 为对象赋值
                     String metdName = methods[j].getName();
                     if (equalFieldAndSet(fieldName, metdName)) {
-                        methods[j].invoke(obj, bson);
+                        if ("id".equals(fieldName)) {
+                            methods[j].invoke(obj, bson.toString());
+                        } else {
+                            methods[j].invoke(obj, bson);
+                        }
                         break;
                     }
                 }
             }
         } catch (Exception ignore) {
             System.out.println(ignore.getMessage());
+            return null;
         }
         return obj;
     }
@@ -104,9 +109,6 @@ public final class BsonUtil {
                     String methdName = method.getName();
                     if (equalFieldAndGet(fieldName, methdName)) {
                         Object val = method.invoke(obj);// 得到值
-                        if (null == val) {
-                            continue;
-                        }
                         if (isJavaClass(method.getReturnType())) {
                             if (method.getReturnType().getName().equals("java.util.List")) {// 列表处理
                                 @SuppressWarnings("unchecked")
@@ -127,6 +129,7 @@ public final class BsonUtil {
             }
         } catch (Exception exception) {
             System.out.println(exception.getMessage());
+            return null;
         }
         return document;
     }
