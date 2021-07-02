@@ -1,15 +1,18 @@
 package study;
 
 import com.mongodb.BasicDBObject;
-import com.mongodb.QueryBuilder;
 import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoCursor;
 import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.model.Filters;
+import com.mongodb.client.result.UpdateResult;
 import org.bson.conversions.Bson;
 import util.MongoDBUtil;
 import org.bson.Document;
+import util.bson.BsonUtil;
+import util.bson.DogModel;
+import util.bson.StudentModel;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -24,9 +27,39 @@ public class MongoStudy {
 
 
     public static void main(String[] args) {
-        initDB();
-        demo();
+//        initDB();
+//        demo();
+        testToBean();
     }
+
+    public static void testToBson() {
+        StudentModel studentModel = new StudentModel();
+        studentModel.setId("10000800223232");
+        studentModel.setCatalogId("100008002");
+        studentModel.setItem_code(184681017);
+        studentModel.setProduct_id("本地自用");
+        studentModel.setDogModel(new DogModel("haiyang"));
+        Document document = BsonUtil.toBson(studentModel);
+        System.out.println(document);
+
+        //更新操作
+        UpdateResult updateResult = sheet.updateOne(
+                Filters.eq("_id", document.get("_id")),
+                new Document("$set", document));
+        long updateCount = updateResult.getMatchedCount();
+
+    }
+
+    public static void testToBean() {
+        Document tempOne = new Document();
+        tempOne.append("_id", "10000800223232");
+        tempOne.append("catalog_id", "100008002");
+        tempOne.append("item_code", 184681017);
+        tempOne.append("dogModel", new Document().append("name", "haiyang"));
+        StudentModel studentModel = BsonUtil.toBean(tempOne, StudentModel.class);
+        System.out.println(studentModel.toString());
+    }
+
 
     public static void demo() {
         List<Bson> list = new ArrayList<>();
